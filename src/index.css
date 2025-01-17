@@ -45,21 +45,48 @@ code {
   margin-top: 44px;
 
 }
-.meals img{
+/* Default styles */
+.meals img {
   width: 100%;
-
- border-top-left-radius: 11px;
- border-top-right-radius: 11px;
-
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
 }
-.mealImg{
 
-
+.mealImg {
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 3px 3px 3px rgb(240, 240, 240);
   border-radius: 11px;
+  padding: 10px; /* Added padding for spacing */
+  margin: 10px auto; /* Centered for small screens */
+  max-width: 400px; /* Restrict width for large images */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .meals img {
+    width: 100%; /* Images remain full-width */
+  }
+
+  .mealImg {
+    box-shadow: 0px 2px 2px 2px rgb(230, 230, 230); /* Slightly lighter shadow */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .meals img {
+    border-top-left-radius: 8px; /* Adjust radius for smaller screens */
+    border-top-right-radius: 8px;
+  }
+
+  .mealImg {
+    padding: 5px;
+    max-width: 100%; /* Full-width for smaller devices */
+    box-shadow: none; /* Optional: Remove shadow for simplicity */
+  }
+}
+
 .mealImg p{
   font-weight: 600;
 }
